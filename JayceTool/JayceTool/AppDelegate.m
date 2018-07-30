@@ -17,6 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    if (@available(iOS 11, *)){
+        NSLog(@"this is IOS 11");
+    }
+    
     return YES;
 }
 
