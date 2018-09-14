@@ -1,0 +1,20 @@
+PODS:
+  - IQKeyboardManager (6.1.1)
+  - JCTool (0.0.1)
+
+DEPENDENCIES:
+  - IQKeyboardManager
+  - JCTool (~> 0.0.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IQKeyboardManager
+    - JCTool
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
+  JCTool: 7a73651987390cf068434cdc6cb91617d294eb6a
+
+PODFILE CHECKSUM: 7231e91424e140cf57af3e62d31104626567564e
+
+COCOAPODS: 1.5.3

@@ -13,7 +13,7 @@
 		11ADE5FC210AC34500C070DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11ADE5FB210AC34500C070DC /* Assets.xcassets */; };
 		11ADE5FF210AC34500C070DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11ADE5FD210AC34500C070DC /* LaunchScreen.storyboard */; };
 		11ADE602210AC34500C070DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ADE601210AC34500C070DC /* main.m */; };
-		11ADE612210DBDEE00C070DC /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ADE611210DBDEE00C070DC /* UIButton+Extension.m */; };
+		C8BD88D20BA43B14807B9DCC /* libPods-JayceTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F53518A7F5CF864D5CA085A4 /* libPods-JayceTool.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,9 @@
 		11ADE5FE210AC34500C070DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11ADE600210AC34500C070DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11ADE601210AC34500C070DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		11ADE610210DBDEE00C070DC /* UIButton+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
-		11ADE611210DBDEE00C070DC /* UIButton+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		219F1C7D2337F1B26405E642 /* Pods-JayceTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JayceTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JayceTool/Pods-JayceTool.debug.xcconfig"; sourceTree = "<group>"; };
+		57824F2D6EECDBD9EB6B09C2 /* Pods-JayceTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JayceTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-JayceTool/Pods-JayceTool.release.xcconfig"; sourceTree = "<group>"; };
+		F53518A7F5CF864D5CA085A4 /* libPods-JayceTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JayceTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8BD88D20BA43B14807B9DCC /* libPods-JayceTool.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +49,8 @@
 			children = (
 				11ADE5F1210AC34200C070DC /* JayceTool */,
 				11ADE5F0210AC34200C070DC /* Products */,
+				D044D4EF10AAB19CFE99A657 /* Pods */,
+				A1E9B92918C7AE3CDE9D9B4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,10 +82,25 @@
 		11ADE60C210DBDA700C070DC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				11ADE610210DBDEE00C070DC /* UIButton+Extension.h */,
-				11ADE611210DBDEE00C070DC /* UIButton+Extension.m */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		A1E9B92918C7AE3CDE9D9B4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F53518A7F5CF864D5CA085A4 /* libPods-JayceTool.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D044D4EF10AAB19CFE99A657 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				219F1C7D2337F1B26405E642 /* Pods-JayceTool.debug.xcconfig */,
+				57824F2D6EECDBD9EB6B09C2 /* Pods-JayceTool.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11ADE605210AC34500C070DC /* Build configuration list for PBXNativeTarget "JayceTool" */;
 			buildPhases = (
+				CAD60C9C3423822FA135575E /* [CP] Check Pods Manifest.lock */,
 				11ADE5EB210AC34200C070DC /* Sources */,
 				11ADE5EC210AC34200C070DC /* Frameworks */,
 				11ADE5ED210AC34200C070DC /* Resources */,
+				D97E822D94C593CA3509A369 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,13 +170,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CAD60C9C3423822FA135575E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JayceTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D97E822D94C593CA3509A369 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JayceTool/Pods-JayceTool-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JayceTool/Pods-JayceTool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		11ADE5EB210AC34200C070DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				11ADE5F7210AC34200C070DC /* ViewController.m in Sources */,
-				11ADE612210DBDEE00C070DC /* UIButton+Extension.m in Sources */,
 				11ADE602210AC34500C070DC /* main.m in Sources */,
 				11ADE5F4210AC34200C070DC /* AppDelegate.m in Sources */,
 			);
@@ -295,15 +354,17 @@
 		};
 		11ADE606210AC34500C070DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 219F1C7D2337F1B26405E642 /* Pods-JayceTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HC7ZK6GR5M;
 				INFOPLIST_FILE = JayceTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jayce.com.JayceTool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cikeOnline.cike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -311,15 +372,17 @@
 		};
 		11ADE607210AC34500C070DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57824F2D6EECDBD9EB6B09C2 /* Pods-JayceTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HC7ZK6GR5M;
 				INFOPLIST_FILE = JayceTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jayce.com.JayceTool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cikeOnline.cike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

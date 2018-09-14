@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import <UIButton+Extension.h>
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *testBtn;
 
 @end
 
@@ -17,7 +19,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+   
+    [self.testBtn setEnlargedEdgeWithTop:15 left:15 botttom:15 right:15];
+    
+#if TARGET_IPHONE_SIMULATOR
+    NSLog(@"run on simulator");
+#define SIMULATOR_TEST
+#else
+    //不定义SIMULATOR_TEST这个宏
+    NSLog(@"run on device");
+#endif
+    
+#ifndef SIMULATOR_TEST
+   NSLog(@"run on device2");
+#endif
+    
 }
+
+- (IBAction)buttonAction:(id)sender {
+  
+}
+
 
 
 - (void)didReceiveMemoryWarning {
